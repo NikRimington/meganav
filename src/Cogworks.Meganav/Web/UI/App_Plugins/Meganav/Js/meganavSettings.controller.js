@@ -1,5 +1,7 @@
 ﻿function MeganavSettings($scope, $controller, meganavResource) {
 
+    
+
     $scope.dialogOptions = {
         currentTarget: null
     };
@@ -9,6 +11,9 @@
         { name: "Label", value: "label", requiresUrl: false, requiresName: true },
         { name: "Seperator", value: "seperator", requiresUrl: false, requiresName: false }
     ];
+
+    if ($scope.target !== null && $scope.target !== undefined && ($scope.target.nodeType == null || $scope.target.nodeType === undefined))
+        $scope.target.nodeType = nodeTypes[0];
 
     if ($scope.model.value) {
         $scope.dialogOptions.currentTarget = $scope.model.value;
