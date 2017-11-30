@@ -15,6 +15,8 @@ namespace Cogworks.Meganav.Models
 
         public string Url { get; set; }
 
+        public string NodeTypeSimple { get; set; }
+
         [JsonIgnore]
         public IPublishedContent Content { get; set; }
 

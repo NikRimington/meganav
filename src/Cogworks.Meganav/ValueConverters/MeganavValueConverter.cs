@@ -61,6 +61,16 @@ namespace Cogworks.Meganav.ValueConverters
             {
                 item.Level = level;
 
+                switch (item.NodeTypeSimple)
+                {
+                    case "seperator":
+                        item.ItemType = ItemType.Seperator;
+                        break;
+                    case "label":
+                        item.ItemType = ItemType.Label;
+                        break;
+                }
+
                 // it's likely a content item
                 if (item.Id > 0)
                 {
@@ -98,7 +108,7 @@ namespace Cogworks.Meganav.ValueConverters
             }
 
             // remove unpublished content items
-            items = items.Where(x => x.Content != null || x.ItemType == ItemType.Link);
+            items = items.Where(x => !(x.ItemType == ItemType.Content && x.Content == null));
 
             return items;
         }

@@ -72,19 +72,26 @@
         $scope.settingsOverlay = null;
     }
 
-    function buildNavItem (data) {
+    function buildNavItem(data) {
+
         return {
-            id: data.id,
-            name: data.name,
-            title: data.title,
-            target: data.target,
-            url: data.url || "#",
+            id: data.nodeType.value === "item" ? data.id : undefined,
+            name: data.nodeType.value === "item" ? data.name : undefined,
+            title: data.nodeType.value === "seperator" ? "--seperator--" : data.title,
+            target: data.nodeType.value === "item" ? data.target : undefined,
+            url: data.nodeType.value === "item" ? data.url || "#" : undefined,
             children: data.children || [],
-            icon: data.icon || "icon-link",
+            icon: data.nodeType.value === "seperator"
+                ? "icon-remove"
+                : data.nodeType.value === "label"
+                ? "icon-tag"
+                : (data.icon || "icon-link"),
             published: true,
             naviHide: data.naviHide,
-            nodeType: data.nodeType
+            nodeType: data.nodeType,
+            nodeTypeSimple: data.nodeType.value
         }
+
     }
 }
 
