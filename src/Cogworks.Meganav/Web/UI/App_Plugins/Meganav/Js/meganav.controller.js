@@ -82,7 +82,8 @@
             children: data.children || [],
             icon: data.icon || "icon-link",
             published: true,
-            naviHide: data.naviHide
+            naviHide: data.naviHide,
+            nodeType: data.nodeType
         }
     }
 }

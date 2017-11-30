@@ -4,7 +4,14 @@
         currentTarget: null
     };
 
+    $scope.nodeTypes = [
+        { name: "Menu item", value: "item", requiresUrl: true, requiresName: true },
+        { name: "Label", value: "label", requiresUrl: false, requiresName: true },
+        { name: "Seperator", value: "seperator", requiresUrl: false, requiresName: false }
+    ];
+
     if (!_.isEmpty($scope.model.value)) {
+
         $scope.dialogOptions.currentTarget = $scope.model.value;
 
         // v7.12 hack due to controller checking wrong variable
@@ -33,6 +40,7 @@
             });
         }
     }
+    
 }
 
 angular.module("umbraco").controller("Cogworks.Meganav.MeganavSettingsController", MeganavSettings);
