@@ -1,8 +1,8 @@
 ﻿<div ng-controller="Cogworks.Meganav.MeganavSettingsController" class="umb-overlay-body umb-modal">
 	
-	<umb-control-group label="Node Type">
+	<umb-control-group label="Item Type">
 		
-		<select ng-model="target.nodeType" ng-options="nodeType as nodeType.name for nodeType in nodeTypes track by nodeType.value">
+		<select ng-model="target.nodeType" ng-required="true" ng-options="nodeType as nodeType.name for nodeType in nodeTypes track by nodeType.value">
 		</select>
 
 	</umb-control-group>
