@@ -18,5 +18,6 @@
   </metadata>
   <files>
     <file src="Web\UI\**\*.*" target="content" />
+	<file src="bin\release\Cogworks.Meganav.dll" target="lib" />
   </files>
 </package>
