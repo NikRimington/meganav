@@ -3,13 +3,13 @@
   <metadata>
     <id>$id$</id>
     <version>$version$</version>
-    <title>$title$</title>
-    <authors>$author$</authors>
+    <title>Freshwater Modified - Cogworks MegaNav</title>
+    <authors>$author$ &amp; Freshwater</authors>
     <owners>$author$</owners>
     <licenseUrl>https://github.com/thecogworks/meganav/blob/master/LICENSE.md</licenseUrl>
     <projectUrl>https://github.com/thecogworks/meganav</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>$description$</description>
+    <description>$description$ - Edited by Freshwater</description>
     <copyright>$copyright$</copyright>
     <tags>Umbraco Navigation</tags>
     <dependencies>
